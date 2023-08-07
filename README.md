@@ -1,2 +1,75 @@
-# Task-Sphere
-TaskSphere is a powerful and intuitive ToDo list application built with React. It aims to help users organize their tasks efficiently, increase productivity, and manage their daily responsibilities with ease. With TaskSphere, you can create, prioritize, and track your tasks effortlessly, ensuring you stay on top of your to-do list.
+# Task-Sphere 📝🌐
+
+![Task-Sphere Logo](task_sphere_logo.png) (You can add your own logo here)
+
+## Overview 📋
+
+Task-Sphere is a feature-rich ToDo list application developed using React, designed to empower users in organizing their tasks efficiently, boosting productivity, and effectively managing daily responsibilities. With Task-Sphere, you can effortlessly create, prioritize, and track tasks, ensuring you stay on top of your to-do list and accomplish your goals with ease.
+
+## Features 🚀
+
+- **Intuitive Task Management:** Seamlessly create, edit, and delete tasks with an intuitive user interface.
+- **Priority and Due Dates:** Set task priorities and assign due dates to stay focused on critical activities.
+- **Task Categorization:** Categorize tasks with labels or tags for quick identification and organization.
+- **Task Notes:** Add detailed notes and descriptions to tasks to provide additional context and instructions.
+- **Reminders and Notifications:** Receive timely reminders and notifications to avoid missing important deadlines.
+- **Search and Filtering:** Easily find specific tasks using search and filtering options.
+- **Responsive Design:** Enjoy a consistent and delightful experience across various devices, including desktops, tablets, and smartphones.
+
+## Screenshots/Demo 📸🎥
+
+![Task-Sphere Screenshot 1](task_sphere_screenshot_1.png)  
+![Task-Sphere Screenshot 2](task_sphere_screenshot_2.png)
+
+You can check out a live demo of Task-Sphere [here](https://www.tasksphere-demo.com) (Replace this with your actual demo link if available).
+
+## Getting Started 🛠️
+
+To run Task-Sphere locally on your machine, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/Diegofergamboa/Task-Sphere.git`
+2. Navigate to the project directory: `cd Task-Sphere`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
+
+## Usage 💡
+
+After setting up the project, you can start using Task-Sphere to manage your tasks efficiently. Here are some tips to get started:
+
+1. Create a new task by clicking on the "Add Task" button and filling in the details.
+2. Utilize the priority levels and due dates to prioritize and organize your tasks effectively.
+3. Categorize tasks using labels to group related activities and projects together.
+4. Access additional options by hovering over each task to mark as completed, edit, or delete.
+
+## Technologies Used 🛠️
+
+Task-Sphere is built using the following technologies:
+
+- React
+- Redux (optional, if applicable)
+- CSS (or CSS-in-JS libraries, if used)
+- Node.js (if a backend is included)
+- MongoDB (if applicable)
+
+## Roadmap 🗺️
+
+The future development of Task-Sphere includes:
+
+- User authentication and user-specific task lists
+- Integration with external calendar applications
+- Collaboration features, allowing users to share tasks with others
+- Mobile app version for on-the-go task management
+
+## Contribution Guidelines 🤝
+
+We welcome contributions to Task-Sphere! To contribute, please follow our [contribution guidelines](CONTRIBUTING.md) (create this file if it doesn't exist).
+
+## License 📜
+
+Task-Sphere is licensed under the [MIT License](LICENSE).
+
+## Contact Information 📧
+
+If you have any questions or feedback, feel free to reach out to us at [contact@tasksphere.com](mailto:contact@tasksphere.com) or follow us on Twitter [@TaskSphereApp](https://twitter.com/TaskSphereApp).
+
+Thank you for choosing Task-Sphere! We hope it streamlines your task management and enhances your productivity. 👍
