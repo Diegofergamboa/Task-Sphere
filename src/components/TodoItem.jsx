@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TodoItem = ({ text, completed }) => {
+const TodoItem = ({ text, completed, completeTodo, deleteTodo }) => {
 
     {/* Check of the completed tasks */ }
     const completeText = () => {
@@ -9,9 +9,9 @@ const TodoItem = ({ text, completed }) => {
 
     return (
         <div className='TodoItem'>
-            <span className='TodoItem__Complete'></span>
+            <span className='TodoItem__Complete' onClick={completeTodo}></span>
             <p className={completeText()}>{text}</p>
-            <span className='TodoItem__Delete'></span>
+            <span className='TodoItem__Delete' onClick={deleteTodo}></span>
         </div>
     )
 }
