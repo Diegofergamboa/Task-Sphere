@@ -23,9 +23,9 @@ function App() {
 
     {/*  Setup for the todos search and filter */ }
     const [searchValue, setSearchValue] = useState('')
-    
+
     const filterTodos =  todos.filter(todo => todo.text.includes(searchValue))
-    console.log(filterTodos)
+    
 
   return (
     <>
