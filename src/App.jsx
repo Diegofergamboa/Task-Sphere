@@ -11,7 +11,7 @@ const defaultTodos = [
   { text: 'Third Task To Do', completed: false },
   { text: 'Four Task To Do ', completed: false },
   { text: 'FIve Task To Do', completed: false },
-];
+]
 
 function App() {
   {/*  Setup for the todos render */ }
@@ -21,20 +21,19 @@ function App() {
   const todosCompleted = todos.filter(todo => todo.completed).length
   const totalTodos = todos.length
 
-    {/*  Setup for the todos search and filter */ }
-    const [searchValue, setSearchValue] = useState('')
+  {/*  Setup for the todos search and filter */ }
+  const [searchValue, setSearchValue] = useState('')
 
-    const filterTodos =  todos.filter(todo => todo.text.includes(searchValue))
-    
+  const filterTodos = todos.filter(todo => (todo.text.toLowerCase()).includes(searchValue.toLowerCase()))
 
   return (
     <>
-      <div className="App">
+      <main className="App">
         <TodoCounter
           todosCompleted={todosCompleted}
           totalTodos={totalTodos}
         />
-        <TodoSearch 
+        <TodoSearch
           searchValue={searchValue}
           setSearchValue={setSearchValue}
         />
@@ -50,9 +49,9 @@ function App() {
           })}
         </TodoList>
         <CreateTodoButton />
-      </div>
+      </main>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
