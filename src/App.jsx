@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { TodoCounter } from './components/TodoCounter';
-import { TodoSearch } from './components/TodoSearch.jsx';
-import { TodoList } from './components/TodoList.jsx';
-import { TodoItem } from './components/TodoItem';
-import { CreateTodoButton } from './components/CreateTodoButton';
+import React, { useState } from 'react'
+import { TodoCounter } from './components/TodoCounter'
+import { TodoSearch } from './components/TodoSearch.jsx'
+import { TodoList } from './components/TodoList.jsx'
+import { TodoItem } from './components/TodoItem'
+import { CreateTodoButton } from './components/CreateTodoButton'
 
 const defaultTodos = [
   { text: 'First Task TO DO', completed: true },
@@ -13,9 +13,29 @@ const defaultTodos = [
   { text: 'FIve Task To Do', completed: false },
 ]
 
+const useLocalStorage = (itemName, initialValue) => {
+  const localStorageItem = localStorage.getItem(itemName)
+
+  let parsedItem
+  if (!parsedItem) {
+    localStorage.setItem(itemName, JSON.stringify(initialValue))
+    parsedItem = initialValue
+  } else (
+    parsedItem = JSON.parse(localStorageItem)
+  )
+  const [item, setItem] = React.useState(parsedItem);
+
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemName, JSON.stringify(newItem))
+    setItem(newItem)
+  }
+
+  return [item, saveItem]
+}
+
 function App() {
   {/*  Setup for the todos render */ }
-  const [todos, setTodos] = useState(defaultTodos)
+  const [todos, saveTodos] = useLocalStorage('TODOS_V1', [])
 
   {/*  Setup for the todos counter */ }
   const todosCompleted = todos.filter(todo => todo.completed).length
@@ -30,14 +50,14 @@ function App() {
     const newTodos = [...todos]
     const todoIndex = newTodos.findIndex(todo => todo.text == textTodo)
     newTodos[todoIndex].completed = true
-    return setTodos(newTodos)
+    return saveTodos(newTodos)
   }
 
   const deleteTodo = (textTodo) => {
     const newTodos = [...todos]
     const todoIndex = newTodos.findIndex(todo => todo.text == textTodo)
     newTodos.splice(todoIndex, 1)
-    return setTodos(newTodos)
+    return saveTodos(newTodos)
   }
 
   return (
