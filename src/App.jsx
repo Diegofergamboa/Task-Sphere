@@ -10,7 +10,7 @@ const defaultTodos = [
   { text: 'Second Task TO DO', completed: true },
   { text: 'Third Task To Do', completed: false },
   { text: 'Four Task To Do ', completed: false },
-  { text: 'FIve Task To Do', completed: true },
+  { text: 'FIve Task To Do', completed: false },
 ];
 
 function App() {
@@ -21,6 +21,12 @@ function App() {
   const todosCompleted = todos.filter(todo => todo.completed).length
   const totalTodos = todos.length
 
+    {/*  Setup for the todos search and filter */ }
+    const [searchValue, setSearchValue] = useState('')
+    
+    const filterTodos =  todos.filter(todo => todo.text.includes(searchValue))
+    console.log(filterTodos)
+
   return (
     <>
       <div className="App">
@@ -28,9 +34,12 @@ function App() {
           todosCompleted={todosCompleted}
           totalTodos={totalTodos}
         />
-        <TodoSearch />
+        <TodoSearch 
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+        />
         <TodoList>
-          {todos.map((todo) => {
+          {filterTodos.map((todo) => {
             return (
               <TodoItem
                 key={todo.text}

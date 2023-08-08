@@ -1,10 +1,8 @@
 import React from 'react'
 
-const TodoSearch = () => {
+const TodoSearch = ({searchValue , setSearchValue}) => {
   return (
-    <div>
-      
-    </div>
+    <input onChange={(event) => setSearchValue(event.target.value)} value={searchValue}/> 
   )
 }
 
