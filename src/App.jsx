@@ -14,26 +14,34 @@ const defaultTodos = [
 ];
 
 function App() {
-  const [todos, setTodos] = useState(defaultTodos);
+  {/*  Setup for the todos render */ }
+  const [todos, setTodos] = useState(defaultTodos)
+
+  {/*  Setup for the todos counter */ }
+  const todosCompleted = todos.filter(todo => todo.completed).length
+  const totalTodos = todos.length
 
   return (
     <>
       <div className="App">
-        <TodoCounter />
+        <TodoCounter
+          todosCompleted={todosCompleted}
+          totalTodos={totalTodos}
+        />
         <TodoSearch />
-      <TodoList>
-        {todos.map((todo) => {
-          return (
-            <TodoItem
-              completed={todo.completed}
-              text={todo.text}
-              key={todo.text} // Añade una clave única para cada TodoItem
-            />
-          );
-        })}
-      </TodoList>
+        <TodoList>
+          {todos.map((todo) => {
+            return (
+              <TodoItem
+                key={todo.text}
+                completed={todo.completed}
+                text={todo.text}
+              />
+            )
+          })}
+        </TodoList>
         <CreateTodoButton />
-        </div>
+      </div>
     </>
   );
 }

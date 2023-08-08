@@ -1,9 +1,12 @@
 import React from 'react'
 
-function TodoCounter() {
+const TodoCounter = ({
+    todosCompleted,
+    totalTodos
+}) => {
     return (
         <div>
-            <h1>Has completado X todos de Y ToDos</h1>
+            <h1>You have completed {todosCompleted} of {totalTodos} tasks</h1>
         </div>
     )
 }
