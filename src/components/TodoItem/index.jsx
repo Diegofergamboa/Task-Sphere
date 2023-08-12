@@ -1,10 +1,11 @@
 import React from 'react'
+import './styles.css'
 
-const TodoItem = ({ text, completed, completeTodo, deleteTodo }) => {
+const TodoItem = ({ text, completedTodos, completeTodo, deleteTodo }) => {
 
     {/* Check of the completed tasks */ }
     const completeText = () => {
-        return (completed) ? 'TodoItem__check' : ''
+        return (completedTodos) ? 'TodoItem__check' : ''
     }
 
     return (

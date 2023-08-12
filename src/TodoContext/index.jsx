@@ -12,9 +12,7 @@ function TodoProvider({ children }) {
     } = useLocalStorage('TODOS_V1', []);
     const [searchValue, setSearchValue] = React.useState('');
 
-    const completedTodos = todos.filter(
-        todo => !!todo.completed
-    ).length;
+    const completedTodos = todos.filter(todo => !!todo.completed).length;
     const totalTodos = todos.length;
 
     const searchedTodos = todos.filter(
