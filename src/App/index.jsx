@@ -56,7 +56,7 @@ function App() {
 
   return (
     <AppUI
-      loading={loading}
+/*       loading={loading}
       error={error}
       completedTodos={completedTodos}
       totalTodos={totalTodos}
@@ -64,7 +64,7 @@ function App() {
       setSearchValue={setSearchValue}
       searchedTodos={searchedTodos}
       completeTodo={completeTodo}
-      deleteTodo={deleteTodo}
+      deleteTodo={deleteTodo} */
     />
   );
 }

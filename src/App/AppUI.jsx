@@ -8,7 +8,7 @@ import { EmptyTodos } from '../components/EmptyTodos';
 import { CreateTodoButton } from '../components/CreateTodoButton';
 
 function AppUI({
-    loading,
+/*     loading,
     error,
     completedTodos,
     totalTodos,
@@ -16,18 +16,12 @@ function AppUI({
     setSearchValue,
     searchedTodos,
     completeTodo,
-    deleteTodo,
+deleteTodo, */
 }) {
     return (
         <>
-            <TodoCounter
-                completed={completedTodos}
-                total={totalTodos}
-            />
-            <TodoSearch
-                searchValue={searchValue}
-                setSearchValue={setSearchValue}
-            />
+            <TodoCounter />
+            <TodoSearch />
 
             <TodoList>
                 {loading && (
