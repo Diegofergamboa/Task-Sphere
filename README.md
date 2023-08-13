@@ -23,7 +23,7 @@ Task-Sphere is a feature-rich ToDo list application developed using React, desig
 ![Task-Sphere Screenshot 2](https://github.com/Diegofergamboa/Task-Sphere/assets/72028938/840226b9-9af4-49ed-9ee8-f7d2af79b1ab)
 
 
-You can check out a live demo of Task-Sphere [here](https://www.tasksphere-demo.com) (Replace this with your actual demo link if available).
+You can check out a live demo of Task-Sphere [here](https://verdant-speculoos-8b2994.netlify.app/)
 
 ## Getting Started 🛠️
 
