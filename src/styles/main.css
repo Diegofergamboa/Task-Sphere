@@ -8,20 +8,31 @@
     margin: 0;
 }
 
+
+#root {
+    padding: 60px 20px;
+}
 .App {
+    position: relative;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 80px 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    border:  5px solid var(--color-third);
+    border-radius: 20px;
+    box-shadow: 0 9px 30px rgb(0 0 0 / 0.5);
 }
 
 .TodoList {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    justify-content: center;
+    text-align: center;
 }
 
 .TodoSearch {

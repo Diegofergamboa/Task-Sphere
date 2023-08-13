@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/main.css'
 
 import { TodoCounter } from '../components/TodoCounter';
 import { TodoSearch } from '../components/TodoSearch';
@@ -25,7 +26,8 @@ function AppUI() {
     } = React.useContext(todoContext);
 
     return (
-        <>
+        <div className='App'>
+            <>            
             <TodoCounter />
             <TodoSearch />
             <TodoList>
@@ -59,6 +61,7 @@ function AppUI() {
                 </Modal>
             )}
         </>
+            </div>
     )
 }
 
