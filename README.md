@@ -70,8 +70,4 @@ We welcome contributions to Task-Sphere! To contribute, please follow our [contr
 
 Task-Sphere is licensed under the [MIT License](LICENSE).
 
-## Contact Information 📧
-
-If you have any questions or feedback, feel free to reach out to us at [contact@tasksphere.com](mailto:contact@tasksphere.com) or follow us on Twitter [@TaskSphereApp](https://twitter.com/TaskSphereApp).
-
 Thank you for choosing Task-Sphere! We hope it streamlines your task management and enhances your productivity. 👍
