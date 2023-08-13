@@ -1,7 +1,8 @@
 # Task-Sphere 📝🌐
 
 
-![Task Overview](.file:///home/diegoh/Pictures/Screenshots/Screenshot%20from%202023-08-13%2017-11-55.png)
+![Task Overview](https://github.com/Diegofergamboa/Task-Sphere/assets/72028938/7e05e61e-c8b9-476c-8c40-7bfdd7ad5989)
+
 
 ## Overview 📋
 
