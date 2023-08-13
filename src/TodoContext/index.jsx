@@ -1,5 +1,5 @@
-import React from "react";
-import { useLocalStorage } from "./useLocalStorage";
+import React from "react"
+import { useLocalStorage } from "./useLocalStorage"
 
 const todoContext = React.createContext()
 
@@ -9,39 +9,48 @@ function TodoProvider({ children }) {
         saveItem: saveTodos,
         loading,
         error,
-    } = useLocalStorage('TODOS_V1', []);
-    const [searchValue, setSearchValue] = React.useState('');
+    } = useLocalStorage('TODOS_V1', [])
+    const [searchValue, setSearchValue] = React.useState('')
 
-    const completedTodos = todos.filter(todo => !!todo.completed).length;
-    const totalTodos = todos.length;
+    const completedTodos = todos.filter(todo => !!todo.completed).length
+    const totalTodos = todos.length
 
-    const [openModal, setOpenModal] = React.useState(true)
+    const [openModal, setOpenModal] = React.useState(false)
 
     const searchedTodos = todos.filter(
         (todo) => {
-            const todoText = todo.text.toLowerCase();
-            const searchText = searchValue.toLowerCase();
-            return todoText.includes(searchText);
+            const todoText = todo.text.toLowerCase()
+            const searchText = searchValue.toLowerCase()
+            return todoText.includes(searchText)
         }
-    );
+    )
+
+    const addTodo = (text) => {
+        const newTodos = [...todos]
+        newTodos.push({
+            text,
+            completed: false
+        })
+        saveTodos(newTodos)
+    }
 
     const completeTodo = (text) => {
-        const newTodos = [...todos];
+        const newTodos = [...todos]
         const todoIndex = newTodos.findIndex(
             (todo) => todo.text === text
-        );
-        newTodos[todoIndex].completed = true;
-        saveTodos(newTodos);
-    };
+        )
+        newTodos[todoIndex].completed = true
+        saveTodos(newTodos)
+    }
 
     const deleteTodo = (text) => {
-        const newTodos = [...todos];
+        const newTodos = [...todos]
         const todoIndex = newTodos.findIndex(
             (todo) => todo.text === text
-        );
-        newTodos.splice(todoIndex, 1);
-        saveTodos(newTodos);
-    };
+        )
+        newTodos.splice(todoIndex, 1)
+        saveTodos(newTodos)
+    }
 
     return (
         <todoContext.Provider value={{
@@ -55,7 +64,8 @@ function TodoProvider({ children }) {
             completeTodo,
             deleteTodo,
             openModal,
-            setOpenModal
+            setOpenModal,
+            addTodo
         }}>
             {children}
         </todoContext.Provider>
