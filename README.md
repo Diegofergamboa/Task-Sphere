@@ -1,6 +1,7 @@
 # Task-Sphere 📝🌐
 
-file:///home/diegoh/Pictures/Screenshots/Screenshot%20from%202023-08-13%2017-11-55.png
+
+![Task Overview](.file:///home/diegoh/Pictures/Screenshots/Screenshot%20from%202023-08-13%2017-11-55.png)
 
 ## Overview 📋
 
