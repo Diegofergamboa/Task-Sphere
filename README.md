@@ -1,6 +1,5 @@
 # Task-Sphere 📝🌐
 
-
 ![Task Overview](https://github.com/Diegofergamboa/Task-Sphere/assets/72028938/7e05e61e-c8b9-476c-8c40-7bfdd7ad5989)
 
 
