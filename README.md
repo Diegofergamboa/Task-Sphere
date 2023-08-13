@@ -1,6 +1,6 @@
 # Task-Sphere 📝🌐
 
-![Task-Sphere Logo](task_sphere_logo.png) (You can add your own logo here)
+file:///home/diegoh/Pictures/Screenshots/Screenshot%20from%202023-08-13%2017-11-55.png
 
 ## Overview 📋
 
