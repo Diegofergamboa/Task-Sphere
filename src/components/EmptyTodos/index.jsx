@@ -1,9 +1,14 @@
-import React from 'react';
+import React from 'react'
+import './styles.css'
+import listGif from '../../assets/list.gif'
 
 function EmptyTodos() {
     return (
-        <p>¡Crea tu primer TODO!</p>
-    );
+        <div className='EmptyTodos'>
+            <p>¡Crea tu primer TODO!</p>
+            <img src={listGif} alt='A list of items' width="160px"/> 
+        </div>
+    )
 }
 
-export { EmptyTodos };
+export { EmptyTodos }
